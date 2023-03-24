@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Script from 'next/script';
 import styles from '../styles/Home.module.css';
+import InteractiveMap from '../components/InteractiveMap';
 
 export default function Home() {
   return (
@@ -30,6 +31,9 @@ export default function Home() {
             suppressResizePlaybackWarning
           ></tableau-viz>
         </div>
+        {/* <div className={styles.mapContainer}>
+          <InteractiveMap />
+        </div> */}
       </main>
     </div>
   );

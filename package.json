@@ -20,5 +20,9 @@
     "react-dom": "18.2.0",
     "tableau-embedded-api": "^3.0.1",
     "typescript": "5.0.2"
+  },
+  "devDependencies": {
+    "comlink-loader": "^2.0.0",
+    "worker-loader": "^3.0.8"
   }
 }

@@ -1,17 +1,23 @@
 /* Set background color for the full page */
 
 div.pageContainer {
-  background-color: beige;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 
 p.text {
-  color: black;
+  color: white;
 }
 
 div.chartContainer {
-  background-color: beige;
-  width: 80%;
-  margin: 0 auto;
+  width: 100%;
+  height: 80vh;
+  position: relative;
+  padding-bottom: 50px;
 }
 /* Set background color and dimensions for the charts */
 #tableauViz1 {
@@ -22,6 +28,21 @@ div.chartContainer {
   margin-top: 50px; /* adjust as needed */
   height: 500px;
 }
+
+/* .mapContainer {
+  margin-top: 50px;
+  width: 100%;
+  height: 20vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+
+/* .ol-viewport {
+  width: 100%;
+  height: 100%;
+} */
 
 @media (max-width: 768px) {
   /* Set responsive dimensions for mobile */
