@@ -11,7 +11,6 @@ export default function Home() {
     <div className={styles.pageContainer}>
       <Head>
         <title>Sea Level Rise</title>
-        <script type="module" src="https://my-server/javascripts/api/tableau.embedding.3.latest.min.js"></script>
       </Head>
       <Script
         type="module"
