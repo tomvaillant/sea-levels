@@ -5,7 +5,7 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          <script type="module" src="https://public.tableau.com/javascripts/api/tableau.embedding.3.latest.min.js" defer></script>
+        <script src="https://public.tableau.com/javascripts/api/tableau-2.min.js"></script>
         </Head>
         <body>
           <Main />
