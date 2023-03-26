@@ -1,12 +1,13 @@
 import Head from 'next/head';
-import Script from 'next/script';
 import TableauViz from '../components/TableauViz';
 import styles from '../styles/Home.module.css';
-// import { useState, useEffect, useRef } from 'react';
-// import tableau from 'tableau-api';
+import dynamic from 'next/dynamic';
+import mapStyles from '../styles/InteractiveMap.module.css';
 
 
 export default function Home() {
+
+  const DynamicInteractiveMap = dynamic(() => import('../components/InteractiveMap'), { ssr: false });
 
   return (
     <div className={styles.pageContainer}>
@@ -93,6 +94,11 @@ export default function Home() {
             </div>
             </div>
           </div>
+          <div className={mapStyles.mapContainer}>
+          <div id="map">
+            <DynamicInteractiveMap />
+          </div>
+        </div>
       </main>
     </div>
   );

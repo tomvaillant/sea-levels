@@ -5,6 +5,7 @@ import View from 'ol/View';
 import { Image as ImageLayer, Tile as TileLayer } from 'ol/layer';
 import { Raster as RasterSource, XYZ } from 'ol/source';
 import { fromLonLat } from 'ol/proj';
+import styles from '../styles/InteractiveMap.module.css';
 
 function flood(pixels, data) {
   const pixel = pixels[0];
@@ -101,30 +102,29 @@ export default function InteractiveMap() {
   }, []);
 
   return (
-    <>
-    <div id="map" className="map" ref={mapRef}></div>
-    <label>
-      Sea level
-      <input id="level" type="range" min="0" max="100" defaultValue="1" ref={controlRef} />
-      +<span ref={outputRef}></span> m
-    </label>
-    <br />
-    Go to
-    <a className="location" data-center="-122.3267,37.8377" data-zoom="11">
-      San Francisco
-    </a>
-    ,
-    <a className="location" data-center="-73.9338,40.6861" data-zoom="11">
-      New York
-    </a>
-    ,
-    <a className="location" data-center="72.9481,18.9929" data-zoom="11">
-      Mumbai
-    </a>
-    , or
-    <a className="location" data-center="120.831,31.160" data-zoom="9">
-      Shanghai
-    </a>
-  </>
-);
+    <div className={styles.map} ref={mapRef}>
+      <label>
+        Sea level
+        <input id="level" type="range" min="0" max="100" defaultValue="1" ref={controlRef} />
+        +<span ref={outputRef}></span> m
+      </label>
+      <br />
+      Go to
+      <button className="location" data-center="-122.3267,37.8377" data-zoom="11">
+        San Francisco
+      </button>
+      ,
+      <button className="location" data-center="-73.9338,40.6861" data-zoom="11">
+        New York
+      </button>
+      ,
+      <button className="location" data-center="72.9481,18.9929" data-zoom="11">
+        Mumbai
+      </button>
+      , or
+      <button className="location" data-center="120.831,31.160" data-zoom="9">
+        Shanghai
+      </button>
+    </div>
+  );
 }
