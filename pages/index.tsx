@@ -1,8 +1,8 @@
 import Head from 'next/head';
 import Script from 'next/script';
 import styles from '../styles/Home.module.css';
-import { useState, useEffect, useRef } from 'react';
-import tableau from 'tableau-api';
+// import { useState, useEffect, useRef } from 'react';
+// import tableau from 'tableau-api';
 
 
 export default function Home() {
@@ -46,16 +46,17 @@ export default function Home() {
           </div>
         </section>
 
-          <div className={styles.chartContainer1}>
+          <div className={styles.chartContainer1} data-size="A4">
           <tableau-viz id="tableauViz2"
             src='https://public.tableau.com/views/SeaLevelRise_16796665133140/SeaLevelRise'
             toolbar="yes"
             hide-tabs
             className={styles.tableauViz}
             suppressResizePlaybackWarning
+            data-size="A4"
           ></tableau-viz>
           </div>
-          <div div className={styles.textContainer}>
+          <div className={styles.textContainer}>
           <h2>Who has contributed most?</h2>
           <p className={styles.text}>Historically, the largest carbon emitters in the world have been the United States, China, and the European Union. The United States has been a major contributor to global emissions since the Industrial Revolution, but in recent years, China has overtaken the US as the world's largest carbon emitter due to rapid industrialization and urbanization. The European Union, although responsible for a significant share of historical emissions, has taken substantial steps to reduce its carbon footprint through renewable energy initiatives and other sustainable practices. Collectively, these countries are responsible for a large portion of the greenhouse gases that drive climate change.</p>
           </div>
