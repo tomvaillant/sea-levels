@@ -77,6 +77,17 @@ export default function Home() {
             }}
           />
           </div>
+          <div className={styles.textContainer}>
+            <h2>Major cities at risk</h2>
+            <p className={styles.text}>
+            You can use this map to look at how sea level rise will affect San Franciso, Mumbai, New York and Shanghai.
+            </p>
+          </div>
+          <div className={mapStyles.mapContainer}>
+            <div id="map">
+              <DynamicInteractiveMap />
+            </div>
+          </div>
           <div className={styles.backgroundImage2}>
           <div className={styles.textContainer}>
             <h2>Who will be most affected?</h2>
@@ -94,11 +105,6 @@ export default function Home() {
             </div>
             </div>
           </div>
-          <div className={mapStyles.mapContainer}>
-          <div id="map">
-            <DynamicInteractiveMap />
-          </div>
-        </div>
       </main>
     </div>
   );

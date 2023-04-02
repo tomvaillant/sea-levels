@@ -103,28 +103,30 @@ export default function InteractiveMap() {
 
   return (
     <div className={styles.map} ref={mapRef}>
-      <label>
-        Sea level
-        <input id="level" type="range" min="0" max="100" defaultValue="1" ref={controlRef} />
-        +<span ref={outputRef}></span> m
-      </label>
-      <br />
-      Go to
-      <button className="location" data-center="-122.3267,37.8377" data-zoom="11">
-        San Francisco
-      </button>
-      ,
-      <button className="location" data-center="-73.9338,40.6861" data-zoom="11">
-        New York
-      </button>
-      ,
-      <button className="location" data-center="72.9481,18.9929" data-zoom="11">
-        Mumbai
-      </button>
-      , or
-      <button className="location" data-center="120.831,31.160" data-zoom="9">
-        Shanghai
-      </button>
+      <div className={styles.mapControls}>
+        <label>
+          Sea level
+          <input id="level" type="range" min="0" max="100" defaultValue="1" ref={controlRef} />
+          +<span ref={outputRef}></span> m
+        </label>
+        <br />
+        Go to
+        <button className="location" data-center="-122.3267,37.8377" data-zoom="11">
+          San Francisco
+        </button>
+        ,
+        <button className="location" data-center="-73.9338,40.6861" data-zoom="11">
+          New York
+        </button>
+        ,
+        <button className="location" data-center="72.9481,18.9929" data-zoom="11">
+          Mumbai
+        </button>
+        , 
+        <button className="location" data-center="120.831,31.160" data-zoom="9">
+          Shanghai
+        </button>
+      </div>
     </div>
   );
 }
